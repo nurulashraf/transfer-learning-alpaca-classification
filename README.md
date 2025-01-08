@@ -37,19 +37,19 @@ Source: [Kaggle Alpaca Dataset (Small)](https://www.kaggle.com/datasets/sid4sal/
 
 ---
 
-##Project Structure
+## Project Structure
 
-`data/`: Contains the Alpaca Dataset.
+- `dataset/`: Contains the Alpaca Dataset.
 
-`notebooks/`: Jupyter notebooks for data preprocessing, training, and evaluation.
+- `notebooks/`: Contains the main Jupyter Notebook where the analysis, training, and results are documented.
 
-`models/`: Saved weights and configurations of the trained MobileNet model.
+- `models/`: Saved weights and configurations of the trained MobileNet model.
 
-`src/`: Python scripts for the project workflow.
+- `src/`: Includes the `test_utils.py` file, which provides helper functions or classes used in the notebook.
 
-`results/`: Outputs such as evaluation metrics and test results.
+- `results/`: Outputs such as evaluation metrics and test results.
 
-`README.md`: Project documentation (this file).
+- `README.md`: Project documentation (this file).
 
 
 
@@ -59,22 +59,22 @@ Source: [Kaggle Alpaca Dataset (Small)](https://www.kaggle.com/datasets/sid4sal/
 
 The project follows these steps:
 
-1. Data Collection: Import and review the Alpaca Dataset.
+1. **Data Collection:** Import and review the Alpaca Dataset.
 
 
-2. Data Preprocessing: Resize, normalise, and augment the dataset for training.
+2. **Data Preprocessing:** Resize, normalise, and augment the dataset for training.
 
 
-3. Model Preparation: Load the pre-trained MobileNet model and adjust its layers for classification.
+3. **Model Preparation:** Load the pre-trained MobileNet model and adjust its layers for classification.
 
 
-4. Training: Fine-tune the model on the Alpaca Dataset.
+4. **Training:** Fine-tune the model on the Alpaca Dataset.
 
 
-5. Evaluation: Assess the model using accuracy and loss metrics.
+5. **Evaluation:** Assess the model using accuracy and loss metrics.
 
 
-6. Deployment: Test the model on unseen data to validate its generalisation capability.
+6. **Deployment:** Test the model on unseen data to validate its generalisation capability.
 
 
 
@@ -85,17 +85,17 @@ The project follows these steps:
 
 To run the project, you need the following:
 
-Python 3.8 or later
+- Python 3.8 or later
 
-TensorFlow 2.x
+- TensorFlow 2.x
 
-NumPy
+- NumPy
 
-Matplotlib
+- Matplotlib
 
-Pandas
+- Pandas
 
-Jupyter Notebook
+- Jupyter Notebook
 
 
 Install dependencies using:
@@ -114,11 +114,11 @@ The fine-tuned MobileNet achieved high accuracy on the Alpaca Dataset, demonstra
 
 ## Key Findings
 
-Transfer learning enables efficient training on small datasets.
+- Transfer learning enables efficient training on small datasets.
 
-Data augmentation helps prevent overfitting.
+- Data augmentation helps prevent overfitting.
 
-MobileNet’s lightweight architecture is ideal for resource-constrained tasks.
+- MobileNet’s lightweight architecture is ideal for resource-constrained tasks.
 
 
 
@@ -126,11 +126,11 @@ MobileNet’s lightweight architecture is ideal for resource-constrained tasks.
 
 ## Future Work
 
-Explore additional datasets to test model generalisation further.
+- Explore additional datasets to test model generalisation further.
 
-Implement real-time alpaca detection using the trained model.
+- Implement real-time alpaca detection using the trained model.
 
-Experiment with alternative architectures like ResNet or EfficientNet.
+- Experiment with alternative architectures like ResNet or EfficientNet.
 
 
 
@@ -138,9 +138,9 @@ Experiment with alternative architectures like ResNet or EfficientNet.
 
 ## Acknowledgements
 
-Deeplearning.AI for the MobileNet tutorial.
+- [Deeplearning.ai](https://www.deeplearning.ai/) for the MobileNet tutorial.
 
-Kaggle for providing the Alpaca Dataset.
+- [Kaggle](https://www.kaggle.com/) for providing the Alpaca Dataset.
 
 ---
 
