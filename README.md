@@ -32,7 +32,7 @@ This project explores:
 
 The Alpaca Dataset (Small) contains high-quality images of alpacas. It includes a variety of poses and backgrounds to challenge the model’s ability to generalise. The dataset was curated to mimic real-world scenarios where data availability is limited.
 
-Source: Kaggle Alpaca Dataset (Small)
+Source: [Kaggle Alpaca Dataset (Small)](https://www.kaggle.com/datasets/sid4sal/alpaca-dataset-small/data)
 
 
 ---
@@ -141,3 +141,9 @@ Experiment with alternative architectures like ResNet or EfficientNet.
 Deeplearning.AI for the MobileNet tutorial.
 
 Kaggle for providing the Alpaca Dataset.
+
+---
+
+## License  
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
