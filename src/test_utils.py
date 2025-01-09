@@ -9,7 +9,6 @@ from tensorflow.keras.layers import concatenate
 from tensorflow.keras.layers import ZeroPadding2D
 from tensorflow.keras.layers import Dense
 
-
 # Compare the two inputs
 def comparator(learner, instructor):
     for a, b in zip(learner, instructor):
@@ -24,24 +23,31 @@ def comparator(learner, instructor):
 # extracts the description of a given model
 def summary(model):
     model.compile(optimizer='adam',
-                  loss='categorical_crossentropy',
-                  metrics=['accuracy'])
+                 loss='categorical_crossentropy',
+                 metrics=['accuracy'])
     result = []
     for layer in model.layers:
-        descriptors = [layer.__class__.__name__, layer.output_shape, layer.count_params()]
-        if (type(layer) == Conv2D):
+        if hasattr(layer, 'output'):
+            output_shape = layer.output.shape
+        else:
+            output_shape = None
+            
+        # Ensure consistency with expected summary format
+        descriptors = [layer.__class__.__name__, [output_shape] if layer.__class__.__name__ == 'InputLayer' else output_shape, layer.count_params()]
+        
+        if isinstance(layer, Conv2D):
             descriptors.append(layer.padding)
             descriptors.append(layer.activation.__name__)
             descriptors.append(layer.kernel_initializer.__class__.__name__)
-        if (type(layer) == MaxPooling2D):
+        if isinstance(layer, MaxPooling2D):
             descriptors.append(layer.pool_size)
             descriptors.append(layer.strides)
             descriptors.append(layer.padding)
-        if (type(layer) == Dropout):
+        if isinstance(layer, Dropout):
             descriptors.append(layer.rate)
-        if (type(layer) == ZeroPadding2D):
+        if isinstance(layer, ZeroPadding2D):
             descriptors.append(layer.padding)
-        if (type(layer) == Dense):
+        if isinstance(layer, Dense):
             descriptors.append(layer.activation.__name__)
         result.append(descriptors)
     return result
