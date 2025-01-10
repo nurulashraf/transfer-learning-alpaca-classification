@@ -1,7 +1,7 @@
 
 ---
 
-# Transfer Learning for Alpaca Classificatio
+# Transfer Learning for Alpaca Classification
 
 This project demonstrates the use of transfer learning with the MobileNet architecture to classify images of alpacas using a small, specialised dataset. The Alpaca Dataset (Small), sourced from Kaggle, provides diverse images of alpacas in varying poses, lighting conditions, and backgrounds. The aim of this project is to fine-tune MobileNet, a pre-trained convolutional neural network, to achieve high performance in a niche image classification task with limited data.
 
